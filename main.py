@@ -16,6 +16,11 @@ Ampliación del ejercicio 2:
 """
 agenda = {"Rafael":"987"}
 
+def texto_menu():
+    print("*****************************************")
+    print("\t\tMENU")
+    print(" 1 - Añadir\n 2 - Buscar (unico resultado)\n 3 - Consultar\n 4 - Buscar (patron)\n 5 - Salir")
+
 def menu(num):
     if (num == 1):
         añadir(agenda)
@@ -23,6 +28,8 @@ def menu(num):
         buscar(agenda)
     elif (num == 3):
         consultar(agenda)
+    elif (num == 4):
+        print("falta implementar")
     else:
         print("Opción incorrecta")
 
@@ -46,10 +53,12 @@ def consultar(agenda):
         print("**************************\nNombre: "+ elemento + "\nTelefono: " + agenda[elemento])
 
 if __name__ == "__main__":
-    opcion = int(input("Introduce una opcion (Presiona 4 para salir): " ))
-    while opcion != 4:
+    texto_menu()
+    opcion = int(input("Introduce una opcion: " ))
+    while opcion != 5:
         menu(opcion)
-        if opcion != 4:
+        if opcion != 5:
+            texto_menu()
             opcion = int(input("Introduce una opcion: "))
     print("¡¡Hasta Pronto!!")
     exit()
