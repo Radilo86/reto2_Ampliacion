@@ -18,8 +18,9 @@ agenda = {"Rafael":"987"}
 
 def texto_menu():
     print("*****************************************")
-    print("\t\tMENU")
-    print(" 1 - Añadir\n 2 - Buscar (unico resultado)\n 3 - Consultar\n 4 - Buscar (patron)\n 5 - Salir")
+    print("*\t\tMENU")
+    print("* 1 - Añadir\n* 2 - Buscar (unico resultado)\n* 3 - Consultar\n* 4 - Buscar (patron)\n* 5 - Salir")
+    print("*****************************************\n")
 
 def menu(num):
     if (num == 1):
@@ -29,6 +30,7 @@ def menu(num):
     elif (num == 3):
         consultar(agenda)
     elif (num == 4):
+        buscarPatron(agenda)
         print("falta implementar")
     else:
         print("Opción incorrecta")
@@ -51,6 +53,12 @@ def buscar(agenda):
 def consultar(agenda):
     for elemento in agenda:
         print("**************************\nNombre: "+ elemento + "\nTelefono: " + agenda[elemento])
+
+def buscarPatron(agenda):
+    nombre[]
+    telefono[]
+    patron=input("Introduce el patrón a buscar")
+
 
 if __name__ == "__main__":
     texto_menu()
