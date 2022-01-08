@@ -14,7 +14,7 @@ Ampliación del ejercicio 2:
    - Pepe 659331013
    - Pepe Martín 633743551
 """
-agenda = {"Rafael":"987"}
+agenda = {"Rafael":"987","Rafa":"9876787","Radilo86":"3232","vero":"233","Rodrigo":"23432"}
 
 def texto_menu():
     print("*****************************************")
@@ -58,7 +58,8 @@ def buscarPatron(agenda):
     telefono=[]
     patron=input("Introduce el patrón a buscar: \n")
     for key in agenda:
-        if patron.find(key):
+        # find devuelve la posicion si lo encuentra y -1 si no aparece
+        if key.find(patron) != -1:
             nombre.append(key)
             telefono.append((agenda[key]))
 
