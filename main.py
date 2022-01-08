@@ -31,7 +31,6 @@ def menu(num):
         consultar(agenda)
     elif (num == 4):
         buscarPatron(agenda)
-        print("falta implementar")
     else:
         print("Opción incorrecta")
 
@@ -55,10 +54,19 @@ def consultar(agenda):
         print("**************************\nNombre: "+ elemento + "\nTelefono: " + agenda[elemento])
 
 def buscarPatron(agenda):
-    nombre[]
-    telefono[]
-    patron=input("Introduce el patrón a buscar")
+    nombre=[]
+    telefono=[]
+    patron=input("Introduce el patrón a buscar: \n")
+    for key in agenda:
+        if patron.find(key):
+            nombre.append(key)
+            telefono.append((agenda[key]))
 
+    # Devuelve la lista
+    indice = 0
+    while indice < len(nombre):
+        print(nombre[indice],telefono[indice],"\n")
+        indice=indice+1
 
 if __name__ == "__main__":
     texto_menu()
