@@ -65,7 +65,7 @@ def buscarPatron(agenda):
     # Devuelve la lista
     indice = 0
     while indice < len(nombre):
-        print(nombre[indice],telefono[indice],"\n")
+        print(nombre[indice],telefono[indice])
         indice=indice+1
 
 if __name__ == "__main__":
